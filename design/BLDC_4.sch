@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:BLDC_4-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,6 +29,8 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:crf_1
+LIBS:LTC3824EMSEPBF
+LIBS:lm2937
 LIBS:BLDC_4-cache
 EELAYER 25 0
 EELAYER END
@@ -37,10 +38,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
 Title "BLDC Driver 4.10"
-Date "21 aug 2015"
-Rev "4.10"
+Date "2015-10-25"
+Rev "4.10-jpa"
 Comp "Benjamin Vedder"
-Comment1 ""
+Comment1 "Customized by Petteri Aimonen"
 Comment2 ""
 Comment3 ""
 Comment4 "Top level"
@@ -309,23 +310,23 @@ $EndComp
 $Comp
 L CONN_1 P5
 U 1 1 53FA5B63
-P 8950 1400
-F 0 "P5" H 9030 1400 40  0000 L CNN
-F 1 "IN-" H 8950 1455 30  0001 C CNN
-F 2 "CRF1:1PAD_4x5mm" H 8950 1400 60  0001 C CNN
-F 3 "" H 8950 1400 60  0001 C CNN
-	1    8950 1400
+P 8050 1750
+F 0 "P5" H 8130 1750 40  0000 L CNN
+F 1 "IN-" H 8050 1805 30  0001 C CNN
+F 2 "CRF1:1PAD_4x5mm" H 8050 1750 60  0001 C CNN
+F 3 "" H 8050 1750 60  0001 C CNN
+	1    8050 1750
 	-1   0    0    1   
 $EndComp
 $Comp
 L CONN_1 P4
 U 1 1 53FA5B6A
-P 8950 1200
-F 0 "P4" H 9030 1200 40  0000 L CNN
-F 1 "IN+" H 8950 1255 30  0001 C CNN
-F 2 "CRF1:1PAD_4x5mm" H 8950 1200 60  0001 C CNN
-F 3 "" H 8950 1200 60  0001 C CNN
-	1    8950 1200
+P 8050 1450
+F 0 "P4" H 8130 1450 40  0000 L CNN
+F 1 "IN+" H 8050 1505 30  0001 C CNN
+F 2 "CRF1:1PAD_4x5mm" H 8050 1450 60  0001 C CNN
+F 3 "" H 8050 1450 60  0001 C CNN
+	1    8050 1450
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -361,7 +362,7 @@ F 3 "" H 10200 3650 60  0001 C CNN
 	1    10200 3650
 	1    0    0    -1  
 $EndComp
-Text GLabel 9100 1200 2    60   Input ~ 0
+Text GLabel 8350 1350 1    60   Input ~ 0
 V_SUPPLY
 Text Label 1450 5750 0    40   ~ 0
 RX_SCL_MOSI
@@ -373,7 +374,7 @@ Text Notes 1150 1250 0    340  ~ 68
 BLDC motor controller
 $Bitmap
 Pos 10700 3200
-Scale 1,000000
+Scale 1.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 00 B9 00 00 00 C6 08 02 00 00 00 01 BB B6 
 1F 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 20 00 49 44 41 54 78 9C EC BD 77 5C 54 67 
@@ -1064,27 +1065,6 @@ F1 "temp.sch" 40
 F2 "Temp" I R 2850 6250 60 
 $EndSheet
 $Sheet
-S 2000 3750 850  300 
-U 53FFB6E1
-F0 "CAN bus transceiver" 40
-F1 "CAN.sch" 40
-F2 "CAN_RX" O R 2850 3850 60 
-F3 "CAN_TX" I R 2850 3950 60 
-F4 "CANH" I L 2000 3850 60 
-F5 "CANL" I L 2000 3950 60 
-$EndSheet
-$Comp
-L GND-RESCUE-BLDC_4 #PWR012
-U 1 1 53FB6DA8
-P 1450 4050
-F 0 "#PWR012" H 1450 4050 30  0001 C CNN
-F 1 "GND" H 1450 3980 30  0001 C CNN
-F 2 "" H 1450 4050 60  0001 C CNN
-F 3 "" H 1450 4050 60  0001 C CNN
-	1    1450 4050
-	1    0    0    -1  
-$EndComp
-$Sheet
 S 2000 4350 850  550 
 U 53FBA77E
 F0 "Filters" 60
@@ -1120,8 +1100,6 @@ F 3 "" H 2400 3150 30  0000 C CNN
 	1    2400 3150
 	0    1    1    0   
 $EndComp
-Text Notes 9750 1550 0    40   ~ 0
-Voltage supply (0 - 60v)\nNeeds external decoupling\ncaps to avoid high voltage\ntransients produced by the\ninductance of the battery\nwiring while switching the FETs\nAlso critical for EMI/RF compliance
 $Comp
 L R-RESCUE-BLDC_4 R38
 U 1 1 53FC020B
@@ -1307,7 +1285,7 @@ F31 "SH2_B" I R 7700 4950 60
 $EndSheet
 $Bitmap
 Pos 9900 5750
-Scale 0,000000
+Scale 0.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 03 4C 00 00 02 2D 08 02 00 00 00 85 20 6D 
 AB 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 20 00 49 44 41 54 78 9C EC 9D 79 BC 14 D5 
@@ -4947,8 +4925,6 @@ Wire Wire Line
 Wire Wire Line
 	9850 4950 9850 5050
 Wire Wire Line
-	9100 1500 9100 1400
-Wire Wire Line
 	10050 2700 10050 2700
 Wire Wire Line
 	1450 5750 3250 5750
@@ -4956,10 +4932,6 @@ Wire Wire Line
 	1450 5650 3250 5650
 Wire Wire Line
 	1450 5550 3250 5550
-Wire Wire Line
-	1450 3950 2000 3950
-Wire Wire Line
-	1450 3850 2000 3850
 Wire Wire Line
 	1450 4500 2000 4500
 Wire Wire Line
@@ -4977,10 +4949,6 @@ Wire Wire Line
 Wire Wire Line
 	3250 4800 2850 4800
 Wire Wire Line
-	2850 3850 3250 3850
-Wire Wire Line
-	3250 3950 2850 3950
-Wire Wire Line
 	2150 3050 1450 3050
 Wire Wire Line
 	1450 3150 2150 3150
@@ -4988,14 +4956,6 @@ Wire Wire Line
 	2650 3050 3250 3050
 Wire Wire Line
 	2650 3150 3250 3150
-Wire Notes Line
-	8650 1000 9700 1000
-Wire Notes Line
-	9700 1000 9700 1700
-Wire Notes Line
-	9700 1700 8650 1700
-Wire Notes Line
-	8650 1700 8650 1000
 Wire Wire Line
 	5900 5900 5900 6150
 Wire Wire Line
@@ -5018,28 +4978,6 @@ Wire Wire Line
 	7000 5650 7000 5400
 Wire Wire Line
 	2800 2950 2650 2950
-$Comp
-L CONN_4 P101
-U 1 1 540360D1
-P 1100 3900
-F 0 "P101" H 1100 3650 50  0000 C CNN
-F 1 "CANBUS" H 1100 4150 40  0000 C CNN
-F 2 "JST conn:b4b-ph-kl" H 1100 3950 60  0001 C CNN
-F 3 "" H 1100 3950 60  0000 C CNN
-	1    1100 3900
-	-1   0    0    1   
-$EndComp
-$Comp
-L +5V #PWR017
-U 1 1 54036995
-P 1450 3750
-F 0 "#PWR017" H 1450 3840 20  0001 C CNN
-F 1 "+5V" H 1450 3840 30  0000 C CNN
-F 2 "" H 1450 3750 60  0001 C CNN
-F 3 "" H 1450 3750 60  0001 C CNN
-	1    1450 3750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9550 4950 9850 4950
 Wire Wire Line
@@ -5102,12 +5040,12 @@ $EndComp
 $Comp
 L GND-RESCUE-BLDC_4 #PWR022
 U 1 1 548F2573
-P 9100 1500
-F 0 "#PWR022" H 9100 1500 30  0001 C CNN
-F 1 "GND" H 9100 1430 30  0001 C CNN
-F 2 "" H 9100 1500 60  0001 C CNN
-F 3 "" H 9100 1500 60  0001 C CNN
-	1    9100 1500
+P 8350 1850
+F 0 "#PWR022" H 8350 1850 30  0001 C CNN
+F 1 "GND" H 8350 1780 30  0001 C CNN
+F 2 "" H 8350 1850 60  0001 C CNN
+F 3 "" H 8350 1850 60  0001 C CNN
+	1    8350 1850
 	1    0    0    -1  
 $EndComp
 Text Notes 9150 4900 0    60   ~ 0
@@ -5127,4 +5065,50 @@ Wire Wire Line
 	3250 5850 1450 5850
 Text Label 1450 5850 0    40   ~ 0
 MISO_RX_SCL
+$Sheet
+S 8650 1300 1100 650 
+U 562DC574
+F0 "DC-DC power supply" 60
+F1 "dcdc.sch" 60
+F2 "VIN+" I L 8650 1450 60 
+F4 "+5V_OUT" O R 9750 1450 60 
+F5 "+3.3V_OUT" O R 9750 1600 60 
+$EndSheet
+Wire Wire Line
+	8200 1450 8650 1450
+Wire Wire Line
+	8350 1450 8350 1350
+Connection ~ 8350 1450
+Wire Wire Line
+	8350 1850 8350 1750
+$Comp
+L +5V #PWR?
+U 1 1 562EAD88
+P 9950 1450
+F 0 "#PWR?" H 9950 1540 20  0001 C CNN
+F 1 "+5V" H 10000 1550 30  0000 C CNN
+F 2 "" H 9950 1450 60  0001 C CNN
+F 3 "" H 9950 1450 60  0001 C CNN
+	1    9950 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 1450 9750 1450
+$Comp
+L VCC #PWR?
+U 1 1 562ED1F9
+P 10100 1550
+F 0 "#PWR?" H 10100 1650 30  0001 C CNN
+F 1 "VCC" H 10150 1650 30  0000 C CNN
+F 2 "" H 10100 1550 60  0001 C CNN
+F 3 "" H 10100 1550 60  0001 C CNN
+	1    10100 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 1550 10100 1600
+Wire Wire Line
+	10100 1600 9750 1600
+Wire Wire Line
+	8350 1750 8200 1750
 $EndSCHEMATC

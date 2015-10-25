@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:BLDC_4-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,6 +29,8 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:crf_1
+LIBS:LTC3824EMSEPBF
+LIBS:lm2937
 LIBS:BLDC_4-cache
 EELAYER 25 0
 EELAYER END
@@ -37,10 +38,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
 Title "BLDC Driver 4.10"
-Date "21 aug 2015"
-Rev "4.10"
+Date "2015-10-25"
+Rev "4.10-jpa"
 Comp "Benjamin Vedder"
-Comment1 ""
+Comment1 "Customized by Petteri Aimonen"
 Comment2 ""
 Comment3 ""
 Comment4 ""

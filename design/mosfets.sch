@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:BLDC_4-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,6 +29,8 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:crf_1
+LIBS:LTC3824EMSEPBF
+LIBS:lm2937
 LIBS:BLDC_4-cache
 EELAYER 25 0
 EELAYER END
@@ -37,10 +38,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 7
 Title "BLDC Driver 4.10"
-Date "21 aug 2015"
-Rev "4.10"
+Date "2015-10-25"
+Rev "4.10-jpa"
 Comp "Benjamin Vedder"
-Comment1 ""
+Comment1 "Customized by Petteri Aimonen"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -319,7 +320,7 @@ Text HLabel 8350 3300 2    60   Output ~ 0
 PHASE_3
 $Bitmap
 Pos 10150 5600
-Scale 1,000000
+Scale 1.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 02 72 00 00 02 1A 08 02 00 00 00 2B EB 37 
 F5 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 20 00 49 44 41 54 78 9C EC DD 7F 50 1B F7 
@@ -1272,7 +1273,7 @@ D1 68 34 2C CB CE CF CF 8B 33 95 10 D2 DC DC DC DE DE 5E 53 53 23 BE D4 E2 E2 E2
 A2 DB A5 0E 1C 38 E0 16 C0 12 58 96 15 77 F6 0A 4F DD 5E 07 00 58 7B 10 AB 00 00 00 41 83 79 AB 
 00 00 00 41 83 58 05 00 00 08 1A C4 2A 00 00 40 D0 20 56 01 00 00 82 06 B1 0A 00 00 10 34 88 55 
 00 00 80 A0 41 AC 02 00 00 04 CD FF 03 15 B2 0E 9E 1D 9F E2 F2 00 00 00 00 49 45 4E 44 AE 42 60 
-82 7C 
+82 92 
 EndData
 $EndBitmap
 Connection ~ 4700 3750

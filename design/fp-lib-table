@@ -4,4 +4,8 @@
   (lib (name w_smd_cap)(type Legacy)(uri "$(KIPRJMOD)/Libraries/w_smd_cap.mod")(options "")(descr ""))
   (lib (name "JST conn")(type KiCad)(uri "$(KIPRJMOD)/Libraries/w_conn_jst-ph.pretty")(options "")(descr ""))
   (lib (name w_smd_diode)(type Legacy)(uri "$(KIPRJMOD)/Libraries/w_smd_diode.mod")(options "")(descr ""))
+  (lib (name KEYS7775)(type KiCad)(uri "$(KIPRJMOD)/Libraries/KEYS7775.pretty")(options "")(descr ""))
+  (lib (name microsd)(type Legacy)(uri "$(KIPRJMOD)/Libraries/microsd.mod")(options "")(descr ""))
+  (lib (name LSM6DS3)(type KiCad)(uri "$(KIPRJMOD)/Libraries/LSM6DS3.pretty")(options "")(descr ""))
+  (lib (name bluetooth_spp-ca)(type KiCad)(uri "$(KIPRJMOD)/Libraries/bluetooth_spp-ca.pretty")(options "")(descr ""))
 )

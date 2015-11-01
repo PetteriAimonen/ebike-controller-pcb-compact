@@ -1,4 +1,4 @@
-update=Sun 25 Oct 2015 12:03:35 PM EET
+update=Tue 27 Oct 2015 06:39:46 PM EET
 version=1
 last_client=kicad
 [general]
@@ -64,3 +64,7 @@ LibName29=valves
 LibName30=crf_1
 LibName31=Libraries/LTC3824EMSEPBF
 LibName32=Libraries/lm2937
+LibName33=Libraries/bluetooth_spp-ca
+LibName34=Libraries/microsd
+LibName35=Libraries/lsm303d
+LibName36=Libraries/lsm6ds3

@@ -1,0 +1,29 @@
+Drill report for BLDC_4.kicad_pcb
+Created on Mon May 22 19:25:16 2023
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  Inner.Cu1                 in1
+    L3 :  Inner.Cu2                 in2
+    L4 :  B.Cu                      back
+
+
+Drill file 'BLDC_4.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.300mm  0.0118"  (200 holes)
+    T2  0.600mm  0.0236"  (4 holes)  (with 4 slots)
+    T3  1.000mm  0.0394"  (26 holes)
+    T4  1.520mm  0.0598"  (7 holes)
+    T5  3.200mm  0.1260"  (5 holes)
+
+    Total plated holes count 242
+
+
+Not plated through holes are merged with plated holes
+    unplated through holes:
+    =============================================================
+    T6  0.650mm  0.0256"  (2 holes)
+
+    Total unplated holes count 2

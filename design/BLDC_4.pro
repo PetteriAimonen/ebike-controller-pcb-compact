@@ -1,4 +1,4 @@
-update=Tue 27 Oct 2015 06:39:46 PM EET
+update=Wed 23 Dec 2015 10:49:45 AM EET
 version=1
 last_client=kicad
 [general]
@@ -68,3 +68,13 @@ LibName33=Libraries/bluetooth_spp-ca
 LibName34=Libraries/microsd
 LibName35=Libraries/lsm303d
 LibName36=Libraries/lsm6ds3
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

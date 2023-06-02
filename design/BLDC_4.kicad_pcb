@@ -49,7 +49,7 @@
       (dielectric_constraints no)
     )
     (pad_to_mask_clearance 0)
-    (aux_axis_origin 68 170)
+    (aux_axis_origin 98 50)
     (pcbplotparams
       (layerselection 0x00010f0_80000007)
       (plot_on_all_layers_selection 0x0000000_00000000)
@@ -6737,6 +6737,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
+    (model ":KICAD7_3DMODEL_DIR:Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
@@ -8858,6 +8863,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
+    (model ":KICAD7_3DMODEL_DIR:TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" (layer "B.Cu")
@@ -8918,6 +8928,11 @@
       (net 1 "GND") (pinfunction "Pin_2") (pintype "passive") (tstamp ed347c33-7cfb-4403-893a-59f281af8ed2))
     (model "${KICAD6_3DMODEL_DIR}/TerminalBlock.3dshapes/TerminalBlock_bornier-2_P5.08mm.wrl"
       (offset (xyz 2.539999962 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model ":KICAD7_3DMODEL_DIR:TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal.step"
+      (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
@@ -9307,6 +9322,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
+    (model ":KICAD7_3DMODEL_DIR:TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Capacitor_SMD:C_1206_3216Metric" (layer "B.Cu")
@@ -9489,9 +9509,6 @@
     (stroke (width 0.15) (type default)) (layer "Edge.Cuts") (tstamp d109521e-bccf-4aec-bf97-b23efaaae7cb))
   (gr_line (start 175 51) (end 175 79)
     (stroke (width 0.15) (type default)) (layer "Edge.Cuts") (tstamp e039aafc-b9ad-4f45-851d-8c183aa99c35))
-  (gr_text "2" (at 95.75 160.5) (layer "In1.Cu") (tstamp ab7aa25b-dc35-4ead-9c5b-794be765e94e)
-    (effects (font (size 2 2) (thickness 0.3)))
-  )
   (gr_text "NRST" (at 108.9 70.2) (layer "B.SilkS") (tstamp 02a3d03f-699b-4c04-9fe6-5ac961d495f8)
     (effects (font (size 1 1) (thickness 0.15)) (justify left bottom mirror))
   )

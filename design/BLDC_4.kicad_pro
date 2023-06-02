@@ -912,7 +912,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "BLDC_4.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
